@@ -5,7 +5,7 @@
     <div class="header">
       <img src="./topbg.jpg" alt>
       <!-- <img src="../../assets/list01.png" alt>
-      <img src="./list02.png" alt> -->
+      <img src="./list02.png" alt>-->
     </div>
     <div class="content">
       <div class="rank">
@@ -73,6 +73,8 @@ export default {
     console.log(
       `${process.env.API_HOST}index.php?s=/Campain/Questionnaire/GetRanking`
     );
+    // 本地调试，process.env=='development',会自动加上localhost:8080，process.env.API_HOST=='/api/'代理指向https://wds-test.yfway.com/
+    // 线上，process.env=='production',process.env.API_HOST=='https://wds-test.yfway.com/’
     this.$http
       .get(
         process.env.API_HOST + "index.php?s=/Campain/Questionnaire/GetRanking",
@@ -82,7 +84,7 @@ export default {
         console.log(res);
         res.data.every((item, index) => {
           // item.cover = "./list0" + item.goods_id + ".png";
-          item.cover = this.goodsList[item.goods_id-1].cover;
+          item.cover = this.goodsList[item.goods_id - 1].cover;
           return true;
         });
         console.log(res.data);
