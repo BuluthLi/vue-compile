@@ -91,8 +91,12 @@ export default {
       // 默认是第一个
       showItem: {
         title: "智能语音主机",
-        rankCover: list01,
-        goodsCover: smart01,
+        // rankCover: list01,
+        // goodsCover: smart01,
+        rankCover:
+          "https://wsaiosscdn.yfway.com/ds/Uploads/Picture/2019/04/11/5caeeea872f1d.png",
+        goodsCover:
+          "https://wsaiosscdn.yfway.com/ds/Uploads/Picture/2019/04/26/5cc2b51ce172e.png",
         width: 58,
         id: 1,
         selected: false,
