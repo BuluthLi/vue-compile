@@ -194,6 +194,7 @@ export default {
       if (this.count <= 0 || this.goodsList[id - 1].selected || send)
         return false;
       // 提交用户的选择
+      console.log(process.env.API_HOST);
       send = true;
       let params = new FormData();
       params.append("user_id", user_id);
@@ -260,7 +261,6 @@ export default {
         params
       )
       .then(res => {
-        console.log(res.data);
         this.count = res.data.remind_number;
         if (res.data.remind_number < 3) {
           res.data.user_select.map((item, index) => {

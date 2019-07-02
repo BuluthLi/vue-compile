@@ -10,7 +10,7 @@
 
 <script>
 import Main from "./components/main/Main";
-
+console.log(process.env);
 export default {
   name: "App",
   components: {
